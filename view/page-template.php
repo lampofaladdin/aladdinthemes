@@ -1,10 +1,12 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: 12951
- * Date: 2018/6/28
- * Time: 11:02
- */ ?>
+ * 模板文档
+ * @category WordPress
+ * @package  aladdinThemes
+ * @author   aladdin
+ * @license  MIT
+ * */
+?>
 <div class="content" id="template">
 
 </div>

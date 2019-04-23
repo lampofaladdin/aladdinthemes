@@ -1,9 +1,9 @@
 <?php
 /**
- * WordStar index file
+ * 单页面文件目录
  * @category WordPress
  * @package  aladdinThemes
- * @author   aladdin
+ * @author   aladdin(1295106869@qq.com)
  * @license  MIT
  * */
 get_header();

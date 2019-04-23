@@ -1,6 +1,6 @@
 <?php
 /**
- * WordStar index file
+ * 主页面
  * @category WordPress
  * @package  aladdinThemes
  * @author   aladdin

@@ -1,5 +1,6 @@
-<?php /**
- * WordStar index file
+<?php
+/**
+ * 脚部文件
  * @category WordPress
  * @package  aladdinThemes
  * @author   aladdin
