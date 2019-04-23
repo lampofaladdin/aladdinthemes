@@ -1,0 +1,40 @@
+{
+  "name": "aladdinthemes",
+  "version": "1.0.0",
+  "description": "a simple wordpress themes",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/tuosai/aladdinThemes"
+  },
+  "keywords": [
+    "wordpress",
+    "themes",
+    "simple"
+  ],
+  "author": "aladdin",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.9.3",
+    "postcss-cli": "^6.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "cssnano": {}
+    }
+  },
+  "scripts": {
+    "build": "postcss -r style.css -m && npm run zip",
+    "build:all": "postcss -r style.css -m && npm run zip:all",
+    "zip": "haozipc a -r -tzip archive.zip  ./* -x!node_modules/ -x!archive.zip",
+    "zip:all": "haozipc a -r -tzip archive.zip  ../../../* -x!node_modules/ -x!?git/ -x!?idea/ -x!'wp-config.php' -x!'?htaccess'",
+    "dev": "node-sass --source-map true -w style.scss style.css -output-style expanded"
+  }
+}
