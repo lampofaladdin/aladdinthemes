@@ -1,0 +1,8 @@
+//自定义样式
+
+@mixin font($size,$color:$color_base,$lineHeight:$lineHeight_bg,$weight:normal) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}

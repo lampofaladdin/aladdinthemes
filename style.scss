@@ -13,4 +13,29 @@ Text Domain: aladdinThemes
 a simple、pure wordpress themes.
 */
 
-@import "./css/common";
+
+//工具
+@import "./sass/helper/_variable.scss";     //变量
+@import "./sass/helper/_minix.scss";        //混合指令
+@import "./sass/helper/_functions.scss";    // 方法
+
+//基本
+@import "./sass/base/_reset.scss";          //初始化
+@import "./sass/base/_typography.scss";     //布局
+
+//组件
+@import "./sass/components/_animate.scss";  //动画
+@import "./sass/components/_text.scss";     //文字样式
+@import "./sass/components/_business.scss"; //业务通用样式
+
+//布局
+@import "./sass/layout/_header.scss";      //通用头
+@import "./sass/layout/_footer.scss";      //通用脚部
+@import "./sass/layout/_main.scss";        //通用主体
+
+//页面
+@import "./sass/page/_pc.scss";            //PC端
+@import "./sass/page/_mb.scss";            //移动端
+
+
+

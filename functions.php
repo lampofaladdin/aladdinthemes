@@ -21,12 +21,14 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // 上、下篇.
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );//rel=pre
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );//rel=shortlink
 remove_action( 'wp_head', 'rel_canonical' );
-wp_deregister_script( 'l10n' );
 remove_action( 'wp_head', 'rsd_link' );//移除head中的rel="EditURI"
 remove_action( 'wp_head', 'wlwmanifest_link' );//移除head中的rel="wlwmanifest"
 remove_action( 'wp_head', 'rsd_link' );//rsd_link移除XML-RPC
 remove_filter( 'the_content', 'wptexturize' );//禁用半角符号自动转换为全角
-remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+define( 'AUTOMATIC_UPDATER_DISABLED', true ); //禁用自动更新
+remove_action('admin_init', '_maybe_update_core');    // 禁止 WordPress 检查更新
+remove_action('admin_init', '_maybe_update_plugins'); // 禁止 WordPress 更新插件
+remove_action('admin_init', '_maybe_update_themes');  // 禁止 WordPress 更新主题
 
 //Disable the emoji's
 function disable_emojis() {
@@ -41,10 +43,6 @@ function disable_emojis() {
 }
 add_action( 'init', 'disable_emojis' );
 
-//禁止emjio
-function disable_emojis_tinymce( $plugins ) {
-	return array_diff( $plugins, array( 'wpemoji' ) );
-}
 
 //禁用页面的评论功能
 function disable_page_comments( $posts ) {
@@ -56,12 +54,6 @@ function disable_page_comments( $posts ) {
 }
 add_filter( 'the_posts', 'disable_page_comments' );
 
-// 关闭主题提示
-add_filter('pre_site_transient_update_themes',  create_function('$a', "return null;"));
-
-// 禁止 WordPress 更新主题
-remove_action('admin_init', '_maybe_update_themes');
-
 //wordpress上传文件重命名
 function git_upload_filter($file) {
 	$time = date("YmdHis");
@@ -69,30 +61,6 @@ function git_upload_filter($file) {
 	return $file;
 }
 add_filter('wp_handle_upload_prefilter', 'git_upload_filter');
-
-
-//文章标题
-function website_title() {
-	if ( is_home() ) {
-		bloginfo( 'name' );
-		echo " - ";
-		bloginfo( 'description' );
-	} elseif ( is_category() ) {
-		single_cat_title();
-		echo " - ";
-		bloginfo( 'name' );
-	} elseif ( is_single() || is_page() ) {
-		single_post_title();
-	} elseif ( is_search() ) {
-		echo "搜索结果";
-		echo " - ";
-		bloginfo( 'name' );
-	} elseif ( is_404() ) {
-		echo '页面未找到!';
-	} else {
-		wp_title( '', true );
-	}
-}
 
 /* 得到page页面别名*/
 function get_page_slug($pageId='') {

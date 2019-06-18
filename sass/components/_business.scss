@@ -1,0 +1,133 @@
+//有三角形的链接
+.has-triangle {
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid $color_theme;
+    margin-right: 8px;
+  }
+}
+
+//三角形的链接 后面
+.has-triangle-re {
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid $color_theme;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+}
+
+//有正方形的标题
+.triangle-title {
+  margin-bottom: 40px;
+  a {
+    vertical-align: middle;
+    font-size: $fz_bg;
+    font-weight: bold;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-image: url("./assets/images/common/common_icon_title.jpg");
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 750px){
+    margin-bottom: .4rem;
+    a {
+      font-size: .24rem;
+    }
+    &:before {
+      width: .27rem;
+      height: .27rem;
+      margin-right: .1rem;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+
+
+//通用表格
+.common-table {
+  width: 100%;
+  border: 0;
+  tbody {
+    tr {
+      th {
+        width: 30%;
+        background: #EAECEF;
+        border-bottom: 1px solid $color_base;
+        font-size: 21px;
+      }
+      td {
+        padding: 20px;
+        border-bottom: 1px solid $color_base;
+      }
+      &:first-of-type {
+        th {
+          border-top: 1px solid $color_base;
+        }
+        td {
+          border-top: 1px solid $color_base;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 750px){
+    tbody {
+      tr {
+        th {
+          width: 30%;
+          font-size: $fz_mb_md;
+        }
+        td {
+          padding: .2rem;
+          font-size: $fz_mb_md;
+        }
+      }
+    }
+
+  }
+}
+
+.video-template {
+  cursor: pointer;
+  position: relative;
+  &:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid $color_theme;
+  }
+  &:hover {
+    &:after {
+      display: block;
+    }
+  }
+}
+
+
+
+

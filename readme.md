@@ -1,4 +1,5 @@
 # AladdinThemes 
+一个简单的wordpress主题，用来重新开发使用。
 
 ## Project setup
 ```

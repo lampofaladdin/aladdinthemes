@@ -1,0 +1,36 @@
+/**
+  动画样式
+ */
+
+.animate{
+  transition: all 0.2s linear;
+}
+
+.animate-hover{
+  transition: all 0.2s linear;
+
+
+  &:hover{
+    color: $color_theme;
+    img{
+      box-shadow: 1px 1px 5px #000;
+    }
+    p{
+      color: $color_theme;
+    }
+    span{
+      color: $color_theme;
+    }
+
+  }
+  img{
+    transition: all 0.2s linear;
+  }
+  p{
+    transition: all 0.2s linear;
+  }
+  span{
+    transition: all 0.2s linear;
+  }
+
+}

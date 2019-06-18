@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*
+Theme Name: aladdinThemes
+Theme URI: none
+Author: aladdin(1295106869@qq.com)
+Author URI: http://www.shendengjun.com
+Description: a simple、clear themes
+Version: 0.1
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Tags: simple,clear,pure
+Text Domain: aladdinThemes
+
+a simple、pure wordpress themes.
+*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+a:visited {
+  color: #000;
+  text-decoration: none; }
+
+a:hover,
+a:active {
+  color: #ccc;
+  outline: 0;
+  text-decoration: none; }
+
+a:focus {
+  outline: 0;
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  letter-spacing: 0.2em; }
+
+ul li {
+  list-style: none; }
+
+ol li {
+  list-style: none; }
+
+img {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  font-size: 0; }
+
+/*# sourceMappingURL=style.css.map */

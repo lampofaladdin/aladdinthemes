@@ -1,0 +1,15 @@
+
+.clear {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+  }
+  @media screen and (max-width: 750px) {
+    &:after{
+      display: none;
+    }
+  }
+}

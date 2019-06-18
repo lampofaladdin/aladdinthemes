@@ -1,0 +1,116 @@
+.home-main {
+  @extend .common-width;
+}
+
+.common-main {
+  @extend .common-width;
+  @extend .clear;
+  display: block;
+  margin:40px auto 0 !important;
+  aside {
+    max-width: 210px;
+    min-width: 150px;
+    width: 20%;
+    float: left;
+    h2{
+      text-align: center;
+      background: $color_theme;
+      @include font($fz_sm,#fff,30px,bold)
+    }
+    ul{
+      li{
+        a{
+          display: block;
+          @extend .has-triangle;
+          @include font($fz_sm,$color_base,30px);
+          padding-left:25px;
+          margin:1px 0;
+          background-color: $color_linkbg;
+          &:hover{
+            background-color: $color_linkbg_act;
+          }
+        }
+      }
+      .current_page_item{
+        a{
+          background-color: $color_linkbg_act;
+        }
+
+      }
+
+    }
+  }
+  .content {
+    max-width: 740px;
+    min-width: 560px;
+    width: 75%;
+    float: right;
+    .title{
+      &:first-of-type{
+        margin-top:0;
+      }
+      @extend .triangle-title;
+      @include font($fz_bg,$color_base,1,bold);
+      margin-top:40px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $color_theme;
+      margin-bottom: $hg_ctx_marginbottom;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+
+  .common-main {
+    margin:.4rem auto 0 !important;
+    aside {
+      display: none;
+      max-width: 210px;
+      min-width: 150px;
+      width: 20%;
+      float: left;
+      h2{
+        text-align: center;
+        background: $color_theme;
+        @include font($fz_sm,#fff,30px,bold)
+      }
+      ul{
+        li{
+          a{
+            display: block;
+            @include font($fz_sm,$color_base,30px);
+            padding-left:25px;
+            margin:1px 0;
+            background-color: $color_linkbg;
+            &:hover{
+              background-color: $color_linkbg_act;
+            }
+          }
+        }
+        .current_page_item{
+          a{
+            background-color: $color_linkbg_act;
+          }
+
+        }
+
+      }
+    }
+    .content {
+      max-width: none;
+      min-width: auto;
+      width: 100%;
+      float: none;
+      .title{
+        font-size: $fz_mb_lg;
+        margin-top:.4rem;
+        padding-bottom: .05rem;
+        border-bottom: 2px solid $color_theme;
+        margin-bottom: .3rem;
+      }
+
+    }
+  }
+}

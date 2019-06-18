@@ -1,0 +1,64 @@
+// 初始化样式
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-size: 21px;
+  font-family: Arial, Tahoma, Helvetica,"Microsoft Yahei","微软雅黑",STXihei,"华文细黑",sans-serif;
+  background: #fff;
+  line-height: 1.5;
+  color: $color_base;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+em {
+  font-style: normal;
+}
+
+input, button, select, textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+p {
+  text-align: justify;
+  text-justify: distribute;
+}
+
+a {
+  color: $color_base;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+a:hover {
+  color: $color_base;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  font-size: 0;
+}
+
